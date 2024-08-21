@@ -33,8 +33,9 @@
               <th scope="col">Actions</th>
             </tr>
           </thead>
-          <tbody>
+        
             {% for todo in allTodo %}
+            <tbody>
             <tr>
               <th scope="row">{{loop.index}}</th>
               <td>{{todo.title}}</td>
@@ -45,9 +46,10 @@
                 <a href="/update/{{todo.sno}}" type="button" class="btn btn-outline-secondary  btn-sm mx-1">Update</button>
               </td>
             </tr>
-          </tbody>
-        </table>
+        
             {% endfor %}
+          </tbody>
+          </table>
         {% endif %}
 
   </div>
