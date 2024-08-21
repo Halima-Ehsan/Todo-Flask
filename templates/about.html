@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block body  %}
+<body> 
+    <div class="container">
+    <h1 class="my-3">About</h1>
+    <h2>Welcome to the Todo App!</h2>
+
+    <p>This simple yet powerful app helps you organize your tasks and manage your time effectively.
+         Whether you're tracking daily chores, work assignments, or long-term goals, the Todo App provides an easy-to-use interface to keep you on top of your to-do list.</p>
+         <div class="accordion my-3" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                   <strong> Task Management</strong>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Create, edit, and delete tasks effortlessly.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <strong>Task Details</strong>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Add detailed descriptions and track when tasks were created.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <strong>Progress Tracking</strong>
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Keep track of completed and pending tasks to stay productive.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="my-5">This app is designed to help you focus, prioritize, and get things done. 
+            Whether you're using it for personal or professional purposes,
+             the Todo App can help you stay organized and efficient.</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body
+
+{% endblock body %}
