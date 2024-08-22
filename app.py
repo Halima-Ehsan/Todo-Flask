@@ -40,7 +40,7 @@ def title_page():
 
 
 @app.route('/home', methods=['GET', 'POST'])
-def hello_world():
+def home():
     if 'name' in session:
         if request.method== 'POST':
             title = request.form['title']
