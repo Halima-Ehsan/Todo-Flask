@@ -51,7 +51,7 @@ def home():
         allTodo = Todo.query.all()
         return render_template('index.html', allTodo=allTodo)
     else:
-        return redirect('/login')
+        return redirect('/')
 
 @app.route('/about')
 def about():
