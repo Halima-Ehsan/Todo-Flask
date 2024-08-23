@@ -46,9 +46,9 @@
                 <a class="nav-link" href="/register">Register</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
+            <form class="d-flex" role="search" onsubmit="event.preventDefault();">
               <input class="form-control me-2" id="searchInput" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-secondary" type="submit">Search</button>
+              <button class="btn btn-outline-secondary" type="submit" onclick="filterTable()">Search</button>
             </form>
           </div>
         </div>

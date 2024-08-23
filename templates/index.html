@@ -54,5 +54,39 @@
 
   </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+   function filterTable() {
+  let filter = document.getElementById('searchInput').value.toLowerCase();
+  let table = document.querySelector('.table tbody');
+  let rows = table.getElementsByTagName('tr');
 
+  console.log("Search term:", filter); 
+
+  for (let i = 0; i < rows.length; i++) {
+    let titleCell = rows[i].getElementsByTagName('td')[1];  
+    let descCell = rows[i].getElementsByTagName('td')[2];   
+
+    if (titleCell && descCell) {
+      let titleText = titleCell.textContent || titleCell.innerText;
+      let descText = descCell.textContent || descCell.innerText;
+
+      console.log(`Row ${i}: Title=${titleText}, Description=${descText}`); 
+      if (titleText.toLowerCase().indexOf(filter) > -1 || descText.toLowerCase().indexOf(filter) > -1) {
+        rows[i].style.display = ""; // Show the row
+        console.log(`Row ${i} matched and shown`);
+      } else {
+        rows[i].style.display = "none"; // Hide the row
+        console.log(`Row ${i} did not match and hidden`);
+      }
+    } else {
+      console.warn(`Row ${i} does not have title or description cells`);
+    }
+  }
+}
+document.getElementById('searchInput').addEventListener('input', filterTable);
+
+
+
+  </script>
+  
  {% endblock body %}
